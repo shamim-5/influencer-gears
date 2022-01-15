@@ -319,14 +319,29 @@ small p {
     width: 100%;
     padding: 0;
   }
-  .products{
+  .products {
     padding: 0 20px;
   }
-  .footer-text{
+  .footer-text {
     padding: 0;
   }
   .header-text {
-  width: 80%;
-  margin: 10%;
+    width: 80%;
+    margin: 10%;
+  }
 }
+@media only screen and (max-width: 900px) {
+  section {
+    margin: 0 20px 25px 20px;
+  }
+  .products {
+    padding: 0;
+  }
+  .card img {
+    width: 50%;
+    height: 30%;
+  }
+  .card-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
