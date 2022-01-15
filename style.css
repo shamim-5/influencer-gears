@@ -2,7 +2,7 @@
 
 * {
   font-family: "Poppins", sans-serif;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 }
 :root {
@@ -15,10 +15,9 @@
 section {
   margin: 0 120px 100px 120px;
 }
-header {
-  width: 1228px;
-}
+
 .button-description {
+  margin-top: 1em;
   padding: var(--span-padding);
   width: var(--span-width);
   height: var(--span-height);
@@ -28,7 +27,7 @@ header {
 /* navigation menu 
 ================== */
 .navigation-menu {
-  padding: 87px 120px 0;
+  padding: 87px 0 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -57,6 +56,7 @@ header {
 ================= */
 .header-items {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 span > a {
@@ -66,22 +66,33 @@ span > a {
 h1 {
   font-size: 52px;
   font-weight: 700;
-  padding: 16px 0 0;
-  margin: 0;
 }
-p {
+.header-text > p {
+  margin-bottom: 16px;
   padding: 16px 0;
-  margin-right: 20%;
+  font-weight: 600;
+  font-size: 16px;
+  color: #3a3a3a;
+}
+.header-text {
+  width: 50%;
+  margin-right: 10%;
 }
 .header-image {
-  width: 475px;
+  width: 40%;
   border: 2px solid #f7f0ff;
   border-radius: 50%;
 }
 .header-image img {
   width: 100%;
 }
+.logo-items {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
+  margin: 0 45px;
   width: 1110px;
   height: 110px;
   display: flex;
@@ -92,8 +103,14 @@ p {
   width: 84px;
 }
 /*==========================
-main section start here 
+   main section start here 
 ============================ */
+
+.products{
+  width: 1048px;
+padding: 0 76px;
+}
+
 
 .top-products {
   position: relative;
@@ -101,12 +118,13 @@ main section start here
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-row-gap: 1em;
-  grid-column-gap: 1em;
+  grid-row-gap: 2em;
+  grid-column-gap: 2em;
 }
 .card {
   width: 329px;
   height: 476px;
+  border-radius: 3px;
   display: flex;
   flex-direction: column;
   box-shadow: 5px 5px 40px #aaaaaa;
@@ -114,6 +132,10 @@ main section start here
 .card img {
   width: 300px;
   height: 256px;
+  /* margin: 0; */
+}
+.card-description {
+  /* margin: 0; */
 }
 .product-price > p {
   font-weight: bold;
@@ -130,9 +152,9 @@ main section start here
   display: flex;
 }
 
-.card-descripton h2 {
+h2 {
   font-size: 28px;
-  font-weight: 600px;
+  font-weight: 600;
 }
 .card-descripton p {
   font-size: 14px;
@@ -145,6 +167,10 @@ main section start here
 }
 .see-more a {
   color: #e02c6d;
+}
+.top-products > h2 {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 /* section feature-product 
@@ -176,9 +202,9 @@ p {
   font-size: 16px;
   font-weight: 700;
 }
-.button{
-   background-color: var(--span-background);
-   padding: 10px 24px;
+.button {
+  background-color: var(--span-background);
+  padding: 10px 24px;
 }
 /*===================
  footer start here 
@@ -196,7 +222,7 @@ p {
   font-size: 24px;
 }
 small p {
-  margin: 0;
+  /* margin: 0; */
   color: #d9dbe1;
   font-weight: bold;
   font-size: 14px;
