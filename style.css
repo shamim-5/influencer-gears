@@ -107,44 +107,42 @@ h1 {
 ============================ */
 
 .products {
-  width: 1048px;
   padding: 0 76px 50px;
   position: relative;
 }
 
-.cards {
+.card-group {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 1em;
   grid-column-gap: 1em;
 }
 .card {
-  width: 329px;
-  height: 476px;
+  width: 249px;
+  padding: 15px;
   border-radius: 3px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 5px 5px 40px #aaaaaa;
+  box-shadow: 5px 5px 10px #aaaaaa;
 }
 .card img {
-  width: 300px;
-  height: 256px;
-  padding: 15px;
+  width: 100%;
+  height: 50%;
+
 }
-.card-description {
-  padding: 15px;
-}
+
 .card-description > p,
 .number {
   font-weight: bold;
   font-size: 14px;
   color: #787885;
 }
+.number {
+  margin-left: 5px;
+}
 .card-description > .product-price {
   font-weight: normal;
   font-size: 24px;
 }
-.total-ratings {
+.ratings {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -155,16 +153,12 @@ h1 {
   font-size: 28px;
   font-weight: 500;
 }
-.ratings {
-  margin-right: 10px;
-  display: flex;
-}
-.ratings i {
+
+.filled i {
   width: 16px;
   height: 16px;
 }
-.filled,
-.unfilled {
+.filled {
   color: #fb8200;
 }
 .card-descripton p {
@@ -173,7 +167,7 @@ h1 {
 }
 .see-more {
   position: absolute;
-  right: 0;
+  right: 76px;
   bottom: 0;
 }
 .see-more a {
@@ -195,7 +189,6 @@ h1 {
 .product-image {
   width: 50%;
   margin-right: 96px;
- 
 }
 .product-description {
   width: 50%;
@@ -203,7 +196,6 @@ h1 {
 .product-image img {
   padding-top: 20px;
   width: 100%;
-  
 }
 
 .product-description > h1 {
@@ -217,7 +209,7 @@ h1 {
   color: #6c6c6c;
   margin-bottom: 2em;
 }
-.join-btn{
+.join-btn {
   padding: 10px 24px;
   background-color: var(--span-background);
 }
