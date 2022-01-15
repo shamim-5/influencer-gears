@@ -16,7 +16,7 @@ section {
   margin: 0 120px 100px 120px;
 }
 
-.button-description {
+.description-btn {
   margin-top: 1em;
   padding: var(--span-padding);
   width: var(--span-width);
@@ -106,20 +106,17 @@ h1 {
    main section start here 
 ============================ */
 
-.products{
+.products {
   width: 1048px;
-padding: 0 76px;
+  padding: 0 76px 50px;
+  /* position: relative; */
 }
 
-
-.top-products {
-  position: relative;
-}
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-row-gap: 2em;
-  grid-column-gap: 2em;
+  grid-row-gap: 1em;
+  grid-column-gap: 1em;
 }
 .card {
   width: 329px;
@@ -132,29 +129,43 @@ padding: 0 76px;
 .card img {
   width: 300px;
   height: 256px;
-  /* margin: 0; */
+  padding: 15px;
 }
 .card-description {
-  /* margin: 0; */
+  padding: 15px;
 }
-.product-price > p {
+.card-description > p,
+.number {
   font-weight: bold;
   font-size: 14px;
   color: #787885;
-  padding: 0;
+}
+.card-description > .product-price {
+  font-weight: normal;
+  font-size: 24px;
 }
 .total-ratings {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: space-between;
-}
-.ratings {
-  display: flex;
 }
 
-h2 {
+.card-description h2 {
+  color: #18191f;
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 500;
+}
+.ratings {
+  margin-right: 10px;
+  display: flex;
+}
+.ratings i {
+  width: 16px;
+  height: 16px;
+}
+.filled,
+.unfilled {
+  color: #fb8200;
 }
 .card-descripton p {
   font-size: 14px;
@@ -183,7 +194,6 @@ h2 {
 }
 .product-image {
   width: 404px;
-  height: 270px;
   margin-right: 96px;
 }
 .product-description {
@@ -191,20 +201,24 @@ h2 {
   height: 224px;
 }
 .product-image img {
+  padding-top: 20px;
   width: 100%;
 }
 
-h1 {
+.product-description > h1 {
   font-size: 38px;
   font-weight: 700;
+  margin-bottom: 16px;
 }
-p {
+.product-description > p {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: bold;
+  color: #6c6c6c;
+  margin-bottom: 2em;
 }
-.button {
-  background-color: var(--span-background);
+.join-btn{
   padding: 10px 24px;
+  background-color: var(--span-background);
 }
 /*===================
  footer start here 
