@@ -1,7 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
-
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap);
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: Poppins, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -15,7 +14,6 @@
 section {
   margin: 0 120px 100px 120px;
 }
-
 .description-btn {
   margin-top: 1em;
   padding: var(--span-padding);
@@ -24,8 +22,9 @@ section {
   background: var(--span-background);
   border-radius: var(--span-border-radius);
 }
-/* navigation menu 
-================== */
+a:hover {
+  color: #18191f;
+}
 .navigation-menu {
   padding: 87px 0 0;
   display: flex;
@@ -40,13 +39,12 @@ section {
   display: flex;
   align-items: center;
 }
-
 .nav-link li {
   list-style: none;
   margin-right: 34px;
 }
 .nav-link a {
-  color: #000000;
+  color: #000;
   text-decoration: none;
 }
 .nav-link i {
@@ -58,8 +56,6 @@ section {
 .menu-icon {
   display: none;
 }
-/* header section 
-================= */
 .header-items {
   display: flex;
   justify-content: space-between;
@@ -97,51 +93,45 @@ h1 {
   transform: scale(1.2) rotate(45deg);
   transition: transform 2s ease-out;
 }
-/*==========================
-main section start here 
-============================ */
-
 .logo-items {
   display: flex;
   align-items: center;
 }
-
 .logo {
   margin: 0 45px;
   width: 100%;
   height: 110px;
   display: flex;
   justify-content: space-around;
-  box-shadow: 0px 5px 40px #eae3e3 inset;
+  box-shadow: 0 5px 40px #eae3e3 inset;
 }
 .logo img {
   width: 84px;
 }
 .products {
-  padding: 0 76px 50px;
+  padding: 0 0 50px;
   position: relative;
 }
-
 .card-group {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-row-gap: 1em;
+  grid-row-gap: 2em;
   grid-column-gap: 1em;
+  justify-items: center;
 }
 .card {
-  width: 249px;
+  max-width: 249px;
   padding: 15px;
   border-radius: 3px;
-  box-shadow: 5px 5px 10px #aaaaaa;
+  box-shadow: 5px 5px 10px #aaa;
 }
 .card img {
-  width: 100%;
-  height: 50%;
+  max-width: 100%;
+  min-height: 50%;
 }
-
 .card-description > p,
 .number {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   color: #787885;
 }
@@ -149,7 +139,7 @@ main section start here
   margin-left: 5px;
 }
 .card-description > .product-price {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 24px;
 }
 .ratings {
@@ -157,13 +147,11 @@ main section start here
   justify-content: flex-start;
   align-items: center;
 }
-
 .card-description h2 {
   color: #18191f;
   font-size: 28px;
   font-weight: 500;
 }
-
 .filled i {
   width: 16px;
   height: 16px;
@@ -188,9 +176,6 @@ main section start here
   text-align: center;
   margin-bottom: 30px;
 }
-
-/* section feature-product 
-=========================== */
 .feature-product {
   padding: 0 45px;
   display: flex;
@@ -208,7 +193,6 @@ main section start here
   padding-top: 20px;
   width: 100%;
 }
-
 .product-description > h1 {
   font-size: 38px;
   font-weight: 700;
@@ -216,7 +200,7 @@ main section start here
 }
 .product-description > p {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   color: #6c6c6c;
   margin-bottom: 2em;
 }
@@ -224,9 +208,6 @@ main section start here
   padding: 10px 24px;
   background-color: var(--span-background);
 }
-/*===================
- footer start here 
-===================== */
 .footer-text {
   padding: 50px;
   background-color: #0a0826;
@@ -237,13 +218,13 @@ main section start here
 }
 .footer-text h2 {
   margin-bottom: 10px;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 24px;
 }
 small p {
   margin-bottom: 10px;
   color: #d9dbe1;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
 }
 .icons {
@@ -252,96 +233,135 @@ small p {
 .icons > i {
   width: 32px;
 }
-
-/* ========================
- responsive css start here  
-===========================*/
 @media only screen and (max-width: 688px) {
   section {
-    margin: 0 10px 15px 10px;
+    padding: 20px 20px;
+    margin: 10px 0;
   }
   .navigation-menu {
-    justify-content: space-between;
+    padding: 4px 0 0;
   }
-  .nav-link {
+  .nav-link > ul {
     display: none;
-  }
-  .menu-icon {
-    visibility: block;
-    order: 1;
   }
   .nav-title {
     order: 2;
+  }
+  .menu-icon {
+    display: block;
+    order: 1;
   }
   .nav-icon {
     order: 3;
   }
   .header-items {
-    display: flex;
-    flex-direction: column;
-  }
-  .header-image {
-    order: 1;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
   }
   .header-text {
-    margin-top: 30px;
-    order: 2;
+    width: 100%;
+    margin: 20px 0;
   }
-  .header-text h1 {
-    font-size: 38px;
+  .header-image {
+    width: 80%;
   }
-  .logo-items {
-    display: none;
+  .logo {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 20px 0;
   }
-  .join-btn,
-  .description-btn {
-    padding: 5px 12px;
+  .products {
+    padding: 0;
   }
   .card-group {
     grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    grid-row-gap: 2em;
+  }
+  .see-more {
+    bottom: -35px;
   }
   .feature-product {
-    padding: 0 45px;
-    display: flex;
-    justify-content: column;
-    align-items: center;
-    flex-direction: column;
+    padding: 0;
+    flex-wrap: wrap-reverse;
   }
-
   .product-description {
     width: 100%;
   }
   .product-image {
     width: 100%;
-    margin-right: 0;
-  }
-  .product-image img {
-    width: 100%;
-    padding: 0;
-  }
-  .products {
-    padding: 0 20px;
+    margin: 0;
   }
   .footer-text {
-    padding: 0;
-  }
-  .header-text {
-    width: 80%;
-    margin: 10%;
+    padding: 10px 0;
+    margin: 0;
   }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (min-width: 689px) and (max-width: 992px) {
   section {
-    margin: 0 20px 25px 20px;
+    padding: 20px 20px;
+    margin: 10px 0;
+  }
+  .navigation-menu {
+    padding: 4px 0 0;
+  }
+  .nav-link > ul {
+    display: none;
+  }
+  .nav-title {
+    order: 2;
+  }
+  .menu-icon {
+    display: block;
+    order: 1;
+  }
+  .nav-icon {
+    order: 3;
+  }
+  .header-items {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+  .header-text {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .header-image {
+    width: 80%;
+  }
+  .logo {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 20px 0;
   }
   .products {
     padding: 0;
-  }
-  .card img {
-    width: 50%;
-    height: 30%;
   }
   .card-group {
     grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    grid-row-gap: 2em;
+  }
+  .card {
+    width: 299px;
+    padding: 30px;
+  }
+  .see-more {
+    bottom: -35px;
+  }
+  .feature-product {
+    padding: 0;
+    flex-wrap: wrap-reverse;
+  }
+  .product-description {
+    width: 100%;
+  }
+  .product-image {
+    width: 100%;
+    margin: 0;
+  }
+  .footer-text {
+    padding: 10px 0;
+    margin: 0;
   }
 }
